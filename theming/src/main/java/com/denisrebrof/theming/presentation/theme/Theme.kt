@@ -1,4 +1,4 @@
-package com.denisrebrof.composetest.presentation.theme
+package com.denisrebrof.theming.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

@@ -1,4 +1,4 @@
-package com.denisrebrof.composetest.presentation.ui
+package com.denisrebrof.search.presentation.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*

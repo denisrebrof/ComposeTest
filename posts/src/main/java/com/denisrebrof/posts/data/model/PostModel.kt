@@ -1,8 +1,8 @@
-package com.denisrebrof.search.data.model
+package com.denisrebrof.posts.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class JsonPlaceholderPost(
+data class PostModel(
     @SerializedName("userId")
     val userId: Int,
     @SerializedName("id")

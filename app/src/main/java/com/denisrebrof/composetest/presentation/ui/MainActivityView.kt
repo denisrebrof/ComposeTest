@@ -12,6 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.denisrebrof.search.presentation.ui.SearchUI
+import com.denisrebrof.search.presentation.ui.SearchView
 
 @Preview
 @Composable
