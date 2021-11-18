@@ -7,9 +7,12 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import com.denisrebrof.posts.domain.model.Post
+import com.denisrebrof.posts.presentation.ui.model.PostViewState
 
 @Composable
-fun PostsViewPreview() = PostsUI()
+fun PostsViewPreview() = PostsUI(postsStateDelegate = derivedStateOf { listOf(
+    PostViewState("def", "body")
+) })
 
 @Composable
 fun PostsView(postsViewModel: PostsViewModel) {
@@ -21,12 +24,14 @@ fun PostsView(postsViewModel: PostsViewModel) {
 
 @Composable
 fun PostsUI(
-    postsStateDelegate: State<List<Post>> = derivedStateOf { listOf() },
+    postsStateDelegate: State<List<PostViewState>> = derivedStateOf { listOf() },
     onRefresh: @Composable () -> Unit = {}
 ) {
-    val posts: List<Post> by postsStateDelegate
+    val posts: List<PostViewState> by postsStateDelegate
     LazyColumn {
-//        posts.forEach()
+        posts.forEach {
+            PostView(it)
+        }
     }
 
 }
