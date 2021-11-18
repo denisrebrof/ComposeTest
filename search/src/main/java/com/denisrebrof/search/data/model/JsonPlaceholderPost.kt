@@ -1,4 +1,4 @@
-package com.denisrebrof.composetest.data.model
+package com.denisrebrof.search.data.model
 
 import com.google.gson.annotations.SerializedName
 

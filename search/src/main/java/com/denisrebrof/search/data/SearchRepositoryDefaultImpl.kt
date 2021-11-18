@@ -1,18 +1,17 @@
-package com.denisrebrof.composetest.data
+package com.denisrebrof.search.data
 
-import com.denisrebrof.composetest.data.model.JsonPlaceholderPost
-import com.denisrebrof.composetest.domain.ISearchRepository
-import com.denisrebrof.composetest.domain.model.SearchResult
+import com.denisrebrof.search.data.model.JsonPlaceholderPost
+import com.denisrebrof.search.domain.ISearchRepository
 import javax.inject.Inject
 
 class SearchRepositoryDefaultImpl @Inject constructor(
     private val placeholderApi: JsonPlaceholderApi
 ) : ISearchRepository {
 
-    override suspend fun search(text: String): SearchResult {
+    override suspend fun search(text: String): com.denisrebrof.search.domain.SearchResult {
         return kotlin.runCatching {
-            placeholderApi.getPosts().countEntries(text).let(SearchResult::Success)
-        }.getOrDefault(SearchResult.Error)
+            placeholderApi.getPosts().countEntries(text).let(com.denisrebrof.search.domain.SearchResult::Success)
+        }.getOrDefault(com.denisrebrof.search.domain.SearchResult.Error)
     }
 
     private fun List<JsonPlaceholderPost>.countEntries(text: String): Int = sumOf { post ->

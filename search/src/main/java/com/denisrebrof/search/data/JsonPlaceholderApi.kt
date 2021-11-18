@@ -1,6 +1,6 @@
-package com.denisrebrof.composetest.data
+package com.denisrebrof.search.data
 
-import com.denisrebrof.composetest.data.model.JsonPlaceholderPost
+import com.denisrebrof.search.data.model.JsonPlaceholderPost
 import retrofit2.http.GET
 
 interface JsonPlaceholderApi {

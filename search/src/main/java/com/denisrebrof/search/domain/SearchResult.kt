@@ -1,4 +1,4 @@
-package com.denisrebrof.composetest.domain.model
+package com.denisrebrof.search.domain
 
 sealed class SearchResult {
     object Error : SearchResult()

@@ -1,14 +1,13 @@
-package com.denisrebrof.composetest.presentation.ui
+package com.denisrebrof.search.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.denisrebrof.composetest.domain.ISearchRepository
-import com.denisrebrof.composetest.presentation.ui.model.SearchIntent
-import com.denisrebrof.composetest.presentation.ui.model.SearchViewState
+import com.denisrebrof.search.domain.ISearchRepository
+import com.denisrebrof.search.presentation.model.SearchIntent
+import com.denisrebrof.search.presentation.model.SearchViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject

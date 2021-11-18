@@ -1,4 +1,4 @@
-package com.denisrebrof.composetest.presentation.ui.theme
+package com.denisrebrof.composetest.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

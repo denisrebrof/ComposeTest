@@ -19,7 +19,7 @@ object RetrofitModule {
         val converterFactory = GsonConverterFactory.create()
         return Retrofit
             .Builder()
-            .baseUrl(BuildConfig.SEARCH_API_URL)
+            .baseUrl(BuildConfig.BASE_API_URL)
             .addConverterFactory(converterFactory)
             .build()
     }

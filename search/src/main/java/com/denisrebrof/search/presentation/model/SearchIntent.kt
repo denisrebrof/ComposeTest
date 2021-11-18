@@ -1,4 +1,4 @@
-package com.denisrebrof.composetest.presentation.ui.model
+package com.denisrebrof.search.presentation.model
 
 sealed class SearchIntent {
     data class StartSearch(val text: String): SearchIntent()

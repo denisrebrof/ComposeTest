@@ -1,6 +1,6 @@
-package com.denisrebrof.composetest.presentation.ui.model
+package com.denisrebrof.search.presentation.model
 
-import com.denisrebrof.composetest.domain.model.SearchResult
+import com.denisrebrof.search.domain.SearchResult
 
 sealed class SearchViewState {
     object Undefined : SearchViewState()
