@@ -1,7 +1,7 @@
 package com.denisrebrof.posts.di
 
 import com.denisrebrof.posts.data.PostsRepositoryImpl
-import com.denisrebrof.posts.domain.model.IPostsRepository
+import com.denisrebrof.posts.domain.IPostsRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

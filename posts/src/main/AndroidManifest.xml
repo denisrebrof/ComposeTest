@@ -2,4 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.denisrebrof.posts">
 
+    <application>
+        <activity
+            android:name=".presentation.postlist.PostActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ComposeTest.NoActionBar" />
+    </application>
+
 </manifest>

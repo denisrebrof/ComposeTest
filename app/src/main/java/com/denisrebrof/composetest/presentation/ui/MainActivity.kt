@@ -5,7 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.denisrebrof.theming.presentation.theme.ComposeTestTheme
+import com.denisrebrof.posts.presentation.postlist.PostActivity
+import com.denisrebrof.theming.presentation.theme.DGVGTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,15 +21,17 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun Draw() {
-        ComposeTestTheme {
-            MainActivityView()
+        DGVGTheme {
+            MainActivityView { postId ->
+                PostActivity.getIntent(this, postId).let(this::startActivity)
+            }
         }
     }
 
     @Preview(showBackground = true)
     @Composable
     fun DrawPreview() {
-        ComposeTestTheme {
+        DGVGTheme {
             MainActivityViewPreview()
         }
     }

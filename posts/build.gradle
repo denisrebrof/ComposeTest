@@ -51,6 +51,7 @@ dependencies {
     implementation 'androidx.activity:activity-compose:1.4.0'
     implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0-beta01'
+    implementation "androidx.paging:paging-compose:1.0.0-alpha14"
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
 
@@ -65,4 +66,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+    implementation project(':utils')
+    implementation project(':theming')
 }
