@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
@@ -26,7 +27,8 @@ fun PostsListViewPreview() = DGVGTheme(darkTheme = true) {
 }
 
 @Composable
-fun PostsListView(postsViewModel: PostsViewModel, clickedPostId: (Long) -> Unit = {}) {
+fun PostsListView(clickedPostId: (Long) -> Unit = {}) {
+    val postsViewModel: PostsViewModel = hiltViewModel()
     val postsListDelegate = postsViewModel.pagedPosts.collectAsLazyPagingItems()
     PostsListUI(postsListDelegate, clickedPostId)
 }
